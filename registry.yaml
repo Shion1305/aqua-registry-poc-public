@@ -1,0 +1,28 @@
+packages:
+  - type: http
+    repo_owner: helm
+    repo_name: helm
+    url: https://get.helm.sh/helm-{{.Version}}-{{.OS}}-{{.Arch}}.tar.gz
+    description: The Kubernetes Package Manager
+    files:
+      - name: helm
+        src: "{{.OS}}-{{.Arch}}/helm"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+    checksum:
+      type: http
+      url: "{{.AssetURL}}.sha256sum"
+      file_format: regexp
+      algorithm: sha256
+      pattern:
+        checksum: ^(\b[A-Fa-f0-9]{64}\b)
+        file: "^\\b[A-Fa-f0-9]{64}\\b\\s+(\\S+)$"
+  - type: go_install
+    path: github.com/anqiansong/github-compare
+    description: A GitHub repositories statistics command-line tool for the terminal
+  - type: go_install
+    repo_owner: katbyte
+    repo_name: terrafmt
+    description: Format terraform blocks embedded in files
