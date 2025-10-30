@@ -2,6 +2,12 @@
 
 This is a public repository to showcase how to set up a custom aqua registry.
 
+```bash
+## This might be required to disable built-in policy validation feature.
+export AQUA_DISABLE_POLICY=true
+aqua i
+```
+
 ## To set up private registry
 
 1. Clone this repository

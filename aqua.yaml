@@ -1,11 +1,15 @@
 ---
 registries:
 - type: github_content
-  name: private
-  repo_owner: MyUsername
-  repo_name: aqua-registry-poc-private
-  private: true
+  name: public
+  repo_owner: Shion1305
+  repo_name: aqua-registry-poc-public
   path: registry.yaml
   private: true
   ref: v1
 packages:
+- name: github.com/anqiansong/github-compare
+  registry: public
+  version: "v1.0.1"
+- name: helm/helm@v3.19.0
+  registry: public
