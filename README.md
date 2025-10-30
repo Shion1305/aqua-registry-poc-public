@@ -30,14 +30,14 @@ aqua i
     3. Proceed to `Generate token`. You will get a PAT on the next page.
     4. Set your PAT as environment variable `GITHUB_TOKEN`
     
-        > [!IMPORTANT]
-        > I recommend you not execute `export GITHUB_TOKEN=xxx` directly from the terminal, as it persists the key in your command history.
-        > Use `.envrc.example` to configure your environment safely.
-        > ```bash
-        > cp .envrc.example .envrc
-        > # Fill in your PAT in `.envrc`
-        > source .envrc
-        > ```
+> [!IMPORTANT]
+> I recommend you not execute `export GITHUB_TOKEN=xxx` directly from the terminal, as it persists the key in your command history.
+> Use `.envrc.example` to configure your environment safely.
+> ```bash
+> cp .envrc.example .envrc
+> # Fill in your PAT in `.envrc`
+> source .envrc
+> ```
     
     
 6. Modify `aqua.yaml` and point to your private repository.
