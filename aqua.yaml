@@ -1,9 +1,10 @@
 ---
 registries:
 - type: github_content
-  name: public
-  repo_owner: Shion1305
-  repo_name: aqua-registry-poc-public
+  name: private
+  repo_owner: MyUsername
+  repo_name: aqua-registry-poc-private
+  private: true
   path: registry.yaml
   private: true
   ref: v1

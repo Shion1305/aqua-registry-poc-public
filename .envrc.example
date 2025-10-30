@@ -1,0 +1,2 @@
+export GITHUB_TOKEN=xxxxx
+export AQUA_DISABLE_POLICY=true
