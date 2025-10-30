@@ -3,7 +3,7 @@
 This is a public repository to showcase how to set up a custom aqua registry.
 
 ```bash
-## This might be required to disable built-in policy validation feature.
+## This might be required to disable the built-in policy validation feature.
 export AQUA_DISABLE_POLICY=true
 aqua i
 ```
@@ -12,7 +12,7 @@ aqua i
 
 1. Clone this repository
 2. Ensure you have `gh` (GitHub CLI) installed.
-3. Run this command and push this repository as private repositroy.
+3. Run this command and push this repository as a private repository.
 
     ```shell
     gh repo create --private aqua-registry-poc-private --remote private
@@ -23,8 +23,7 @@ aqua i
     ```bash
     git tag v1 && git push private main --tags
     ```
-
-5. Issue a Personal Acecss Token and configure your environment.
+5. Issue a Personal Access Token and configure your environment.
 
     1. Open [github.com/settings/tokens/new](https://github.com/settings/tokens/new)
     2. Select `repo` scope
@@ -32,7 +31,7 @@ aqua i
     4. Set your PAT as environment variable `GITHUB_TOKEN`
     
         > [!Important]
-        > I recommend you not to execute `export GITHUB_TOKEN=xxx` directly from terminal, as it persists the key in your command history.
+        > I recommend you not execute `export GITHUB_TOKEN=xxx` directly from the terminal, as it persists the key in your command history.
         > Use `.envrc.example` to configure your environment safely.
         > ```bash
         > cp .envrc.example .envrc
@@ -41,7 +40,7 @@ aqua i
         > ```
     
     
-6. Modify `aqua.yaml` and point your private repository.
+6. Modify `aqua.yaml` and point to your private repository.
 
     ```diff
     diff --git a/aqua.yaml b/aqua.yaml
@@ -64,6 +63,4 @@ aqua i
        ref: v1
     ```
 
-6. Ensure you have `aqua.yaml` in your current directory, then run  `aqua i`. It should introduces packages in your environment.
-
-
+7. Ensure you have `aqua.yaml` in your current directory, then run  `aqua i`. It should introduce packages in your environment.
