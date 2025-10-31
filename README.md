@@ -15,13 +15,13 @@ aqua i
 3. Run this command and push this repository as a private repository.
 
     ```shell
-    gh repo create --private aqua-registry-poc-private --remote private
+    gh repo create --private aqua-registry-poc-private --remote private --source .
     ```
 
 4. Create and push a tag.
 
     ```bash
-    git tag v1 && git push private main --tags
+    git tag v1 -f && git push private main --tags
     ```
 5. Issue a Personal Access Token and configure your environment.
 
